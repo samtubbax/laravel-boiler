@@ -25,7 +25,7 @@ class UserController extends \BaseController {
         }
 
         $invalidLogin = Session::get('message');
-        return View::make('login')->with('invalidLogin', $invalidLogin);
+        return View::make('users.login')->with('invalidLogin', $invalidLogin);
     }
 
     /**
@@ -59,7 +59,7 @@ class UserController extends \BaseController {
             );
 
             if (Auth::attempt($userdata)) {
-                Redirect::to('/');
+                return Redirect::to('/');
             } else {
 
                 // validation not successful, send back to form
@@ -81,7 +81,7 @@ class UserController extends \BaseController {
         {
             return Redirect::to('/');
         }
-        return View::make('signup');
+        return View::make('users.signup');
 	}
 
 	/**

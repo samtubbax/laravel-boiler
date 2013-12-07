@@ -1,3 +1,5 @@
+@extends('main.layout')
+@section('content')
 {{ Form::open(array('url' => 'users/create')) }}
 <h1>@lang('users.signup')</h1>
 
@@ -32,3 +34,4 @@
 
 <p>{{ Form::submit(Lang::get('users.signup')) }}</p>
 {{ Form::close() }}
+@stop

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('main.layout')
 @section('content')
     <h1>@lang('app.welcome')</h1>
     <a href="/users/login">@lang('users.login')</a>

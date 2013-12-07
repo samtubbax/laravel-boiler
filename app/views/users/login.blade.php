@@ -1,3 +1,5 @@
+@extends('main.layout')
+@section('content')
 {{ Form::open(array('url' => 'users/login')) }}
     <h1>@lang('users.login')</h1>
 
@@ -25,3 +27,4 @@
 
     <p>{{ Form::submit(Lang::get('users.login')) }}</p>
 {{ Form::close() }}
+@stop
