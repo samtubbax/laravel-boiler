@@ -58,8 +58,10 @@ class UserController extends \BaseController {
                 'password' 	=> Input::get('password')
             );
 
+            $redirectURl = (Input::get('redirect') == '')? '/' : urldecode(Input::get('redirect'));
+
             if (Auth::attempt($userdata)) {
-                return Redirect::to('/');
+                return Redirect::to($redirectURl);
             } else {
 
                 // validation not successful, send back to form

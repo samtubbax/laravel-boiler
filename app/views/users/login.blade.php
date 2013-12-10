@@ -15,6 +15,7 @@
     </p>
     @endif
 
+    {{ Form::hidden('redirect', Request::get('redirect')) }}
     <p>
         {{ Form::label('email', Lang::get('users.email')) }}
         {{ Form::text('email', Input::old('email'), array('placeholder' => 'email@uccbm.com')) }}
