@@ -181,4 +181,16 @@ return array(
 
 	),
 
+
+    'tokens' => array(
+        'twitter_key' => '',
+        'twitter_secret' => '',
+
+        'facebook_key' => '',
+        'facebook_secret' => '',
+
+        'google_client_id' => '',
+        'google_client_secret' => ''
+    ),
+
 );

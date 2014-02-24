@@ -19,7 +19,17 @@ Route::get('/', function()
     }
     else
     {
-        return View::make('hello');
+        if(Session::has('state'))
+        {
+            $state = Session::get('state');
+        }
+        else
+        {
+            $state = md5(rand());
+            Session::put('state', $state);
+        }
+
+        return View::make('hello')->with('state', $state)->with('client_id', Config::get('app.tokens.google_client_id'));
     }
 });
 
