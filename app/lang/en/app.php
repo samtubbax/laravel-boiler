@@ -11,7 +11,7 @@ return array(
     |
     */
 
-    'title' => 'New UCCBM Project',
+    'title' => 'New Lunar Gravity Project',
     'description' => 'Something the boys in the lab cooked up',
-    'footer' => 'A <a href="//uccbm.com">UCCBM</a> application. <a href="mailto:whatsup@uccbm.com">Give us a shout.</a> Feedback is kind of our thing!'
+    'footer' => 'A <a href="//lunargravity.com">Lunar Gravity</a> application. <a href="mailto:spacecom@lunargravity.be">Give us a shout.</a> Feedback is kind of our thing!'
 );
