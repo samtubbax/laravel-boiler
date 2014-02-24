@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
     'local' => array('Robot-Shmobot.local'),
-    'staging' => array('Mothership'),
+    'staging' => array('Mothership')
 ));
 
 /*
