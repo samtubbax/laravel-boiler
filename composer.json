@@ -6,8 +6,8 @@
 	"require": {
 		"laravel/framework": "4.0.*",
         "kriswallsmith/buzz": "v0.10",
-        "intervention/image": "dev-master",
-        "andywer/js-localization": "dev-master"
+        "intervention/image": "1.6.*",
+        "gentle/bitbucket-api": "0.2.*"
 	},
 	"autoload": {
 		"classmap": [

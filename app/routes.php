@@ -22,5 +22,12 @@ Route::get('/', function()
         return View::make('hello');
     }
 });
-
+Route::filter('copy', function()
+{
+    if (Config::get('app.debug'))
+    {
+        return Redirect::to('/');
+    }
+});
 Route::controller('users', 'UserController');
+Route::controller('copy', 'CopyController');

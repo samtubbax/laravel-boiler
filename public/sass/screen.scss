@@ -4,3 +4,46 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/layout";
+@import "compass/utilities";
+@import "compass/css3";
+@import "retina-sprites";
+
+$background-color: #FFF;
+$text-color: #000;
+$link-color: #67a2e5;
+
+@mixin embed-font($fontName, $fontFile) {
+  @font-face {
+    font-family: $fontName;
+    src: url('/fonts/' + $fontFile + '.eot');
+    src: url('/fonts/' + $fontFile + '.eot') format('embedded-opentype'),
+    url('/fonts/' + $fontFile + '.woff') format('woff'),
+    url('/fonts/' + $fontFile + '.ttf') format('truetype'),
+    url('/fonts/' + $fontFile + '.svg#' + $fontName) format('svg');
+  }
+}
+
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+
+  color: $text-color;
+  background-color: $background-color;
+
+  a {
+    color: $link-color;
+  }
+}
+
+@include sticky-footer(50px);
+#footer {
+  background-color: $text-color;
+  color: $background-color;
+  font-size: 20px;
+  @include box-sizing(border-box);
+  padding: 15px;
+
+  a {
+    color: $background-color;
+  }
+}
